@@ -9,7 +9,7 @@ public class Keybinds {
 	
 	public static void init() {
 		
-		keybindCreatePano = new KeyMapping("Take Panorama Screenshot", 82, "Panoramica");
+		keybindCreatePano = new KeyMapping("key.panoramica.take_panorama", 82, "Panoramica");
 		KeyBindingHelper.registerKeyBinding(keybindCreatePano);
 
 	}

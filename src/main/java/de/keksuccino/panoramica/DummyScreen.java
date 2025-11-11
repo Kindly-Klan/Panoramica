@@ -1,6 +1,6 @@
 package de.keksuccino.panoramica;
 
-import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 
@@ -11,7 +11,7 @@ public class DummyScreen extends Screen {
     }
 
     @Override
-    public void render(PoseStack matrixStack, int mouseX, int mouseY, float partialTicks) {
+    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
     }
 
     @Override

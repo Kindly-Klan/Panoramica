@@ -7,9 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 import com.mojang.blaze3d.platform.NativeImage;
-import de.keksuccino.konkrete.Konkrete;
-import de.keksuccino.konkrete.events.SubscribeEvent;
-import de.keksuccino.panoramica.events.TickEvent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Screenshot;
 import net.minecraft.network.chat.ClickEvent;
@@ -43,13 +40,10 @@ public class LegacyPanoramicaHandler {
 	private Minecraft mc = Minecraft.getInstance();
 
 	public static void init() {
-
-		Konkrete.getEventHandler().registerEventsFrom(new LegacyPanoramicaHandler());
-
+		// Handler is now called directly from MixinMinecraft
 	}
 
-	@SubscribeEvent
-	public void onTick(TickEvent e) {
+	public void onTick() {
 
 		try {
 

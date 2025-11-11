@@ -1,10 +1,6 @@
 package de.keksuccino.panoramica;
 
 import java.io.File;
-
-import de.keksuccino.konkrete.Konkrete;
-import de.keksuccino.konkrete.events.SubscribeEvent;
-import de.keksuccino.panoramica.events.TickEvent;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 
@@ -14,13 +10,10 @@ public class PanoramicaHandler {
 	private Minecraft mc = Minecraft.getInstance();
 
 	public static void init() {
-
-		Konkrete.getEventHandler().registerEventsFrom(new LegacyPanoramicaHandler());
-
+		// Handler is now called directly from MixinMinecraft
 	}
 
-	@SubscribeEvent
-	public void onClientTick(TickEvent e) {
+	public void onClientTick() {
 		try {
 			//Listen to and handle panorama keybind press
 			if (Keybinds.keybindCreatePano.isDown()) {
